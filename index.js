@@ -36,7 +36,7 @@ const OtpSchema = new mongoose.Schema(
     createdAt: {
       type: Date,
       default: Date.now,
-      expires: 120,  
+      expires: 300,  
     }
   },
   { versionKey: false }
@@ -88,7 +88,7 @@ app.post('/api/send-email', (req, res) => {
                     </div>
                     
                     <p style="font-size: 14px; color: #999; margin-top: 20px;">
-                        Mã này chỉ có hiệu lực trong 2 phút. Vui lòng không chia sẻ mã này với bất kỳ ai.
+                        Mã này chỉ có hiệu lực trong 5 phút. Vui lòng không chia sẻ mã này với bất kỳ ai.
                     </p>
                 </div>
                 <div style="background-color: #f7f7f7; padding: 15px; text-align: center; font-size: 12px; color: #888;">
